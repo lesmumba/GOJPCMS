@@ -1,4 +1,4 @@
-GOJPCMS
-=======
+GOJPCMS Object Tech Project
+============================
 
-Repo for Obj Tech GOJPCMS
+Repo for Obj Tech GOJPCMS project
