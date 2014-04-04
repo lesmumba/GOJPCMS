@@ -1,11 +1,15 @@
 #BlueJ class context
-comment0.params=project_name\ description\ owner_id\ project_type
+comment0.params=projectName\ description\ ownerId\ projectType
 comment0.target=ProjectComponent(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
 comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Project\n
-comment1.params=project_name\ description\ project_type\ economic_sector\ project_owner
-comment1.target=java.lang.String\ addProject(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment1.params=projectName\ description\ projectType\ economicSector\ projectOwner
+comment1.target=int\ register_project(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
 comment2.params=project_id
-comment2.target=Project\ getProject(java.lang.String)
-comment3.params=project_id\ description\ project_owner\ economic_sector
-comment3.target=java.lang.String\ editProject(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
-numComments=4
+comment2.target=Project\ getProject(int)
+comment3.params=parentId\ subprojectName\ subprojectDescription\ subprojectType\ economicSector\ subProjectOwner
+comment3.target=int\ addSubProject(int,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment4.params=project_id
+comment4.target=Project\ getSubProjects(int)
+comment5.params=
+comment5.target=int\ generateProjectId()
+numComments=6

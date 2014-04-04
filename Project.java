@@ -9,22 +9,22 @@ import java.util.*;
 public class Project
 {
     // instance variables - replace the example below with your own
-    int project_id;
-    String project_name;
-    String owner_id;
-    String project_type;
+    int projectId;
+    String projectName;
+    String ownerId;
+    String projectType;
     String description;
-    String economic_sector;
-    String project_location;
+    String economicSector;
+    String projectLocation;
     //Contract contract;
 
     /**
      * Constructor for objects of class Project
      */
-    public Project(String project_name, String description, String owner_id, String project_type)
+    public Project(String projectName, String description, String owner_id, String project_type, int projectId)
     {
         // initialise instance variables
-    this.project_name=project_name;
+    this.projectName = projectName;
     this.description=description;
     }
 
