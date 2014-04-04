@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=project_name\ description\ owner_id\ project_type
+comment0.target=ProjectComponent(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Project\n
+comment1.params=project_name\ description\ project_type\ economic_sector\ project_owner
+comment1.target=java.lang.String\ addProject(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=project_id
+comment2.target=Project\ getProject(java.lang.String)
+comment3.params=project_id\ description\ project_owner\ economic_sector
+comment3.target=java.lang.String\ editProject(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=4

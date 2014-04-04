@@ -21,10 +21,10 @@ public class Project
     /**
      * Constructor for objects of class Project
      */
-    public Project(String name, String description)
+    public Project(String project_name, String description, String owner_id, String project_type)
     {
         // initialise instance variables
-    this.project_name=name;
+    this.project_name=project_name;
     this.description=description;
     }
 
