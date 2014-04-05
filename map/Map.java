@@ -1,3 +1,5 @@
+package map;
+
 public class Map{
     // instance variables - replace the example below with your own
     private float cords[];

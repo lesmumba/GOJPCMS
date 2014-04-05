@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=amount
+comment0.target=Expenditure(double)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Budget\n\ @param\ budget_id\ -\ the\ budget\ object\ will\ check\ if\ the\ existing\ budget\ id\ is\ in\ the\ budgetting\ database,\ if\ so,\ then\ the\ budget_id\ will\ be\ set\ to\ the\ object\n\ else\ the\ it\ will\ throw\ an\ error\n
+comment1.params=details
+comment1.target=void\ setDetails(java.lang.String)
+comment2.params=expenditure_id
+comment2.target=Expenditure(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getDetails()
+comment4.params=amount
+comment4.target=void\ setAmount(double)
+comment5.params=
+comment5.target=java.lang.String\ expenditureSumary()
+comment5.text=\n\ Summarize\ the\ expenditure\ object\n\ @return\ a\ formatted\ string\ describing\ the\ reason\ for\ the\ expense,\ the\ expensee\ amount\ and\ the\ expenditure\ id\n
+numComments=6

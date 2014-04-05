@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.params=funding_source\ amount
+comment0.target=FundingSource(java.lang.String,\ double)
+comment1.params=fund_id
+comment1.target=FundingSource(java.lang.String)
+comment2.params=amount
+comment2.target=void\ setFundingAmount(double)
+comment3.params=
+comment3.target=java.lang.String\ fundingSumary()
+comment3.text=\n\ Summarize\ the\ fund\ object\n\ @return\ a\ formatted\ string\ describing\ the\ fund\ source\ and\ the\ amount\ funded\n
+numComments=4
