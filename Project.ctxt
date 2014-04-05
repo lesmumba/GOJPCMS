@@ -1,5 +1,0 @@
-#BlueJ class context
-comment0.params=projectName\ description\ owner_id\ project_type\ projectId
-comment0.target=Project(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Project\n
-numComments=1
