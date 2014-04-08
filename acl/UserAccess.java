@@ -1,4 +1,4 @@
-package gojpcms.security;
+package security;
 import gojpcms.project.Project;
 
 
