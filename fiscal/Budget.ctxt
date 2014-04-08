@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.params=budget_id
+comment0.target=Budget(java.lang.String)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Budget\n\ @param\ budget_id\ -\ the\ budget\ object\ will\ check\ if\ the\ existing\ budget\ id\ is\ in\ the\ budgetting\ database,\ if\ so,\ then\ the\ budget_id\ will\ be\ set\ to\ the\ object\n\ else\ the\ it\ will\ throw\ an\ error\n
+comment1.params=amount
+comment1.target=Budget(double)
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Budget\n\ @param\ amount\ -\ will\ set\ the\ intial\ budget\ balance\ to\ the\ amount\ given\ as\ parameter.\ Afterwards\ a\ default\ budget\ id\ will\ be\ generated\ \n\ and\ attach\ to\ the\ budget\ object\n
+comment2.params=
+comment2.target=java.lang.String\ generateBudgetId()
+comment2.text=\n\ generateBudgetId\ -\ generates\ an\ unique\ id\ using\ java\ UUID\n\ @return\ the\ budget_id\n
+comment3.params=cost
+comment3.target=void\ setEstimatedCost(double)
+comment3.text=\n\ Set\ the\ cost\ of\ the\ project\ being\ funded\n
+comment4.params=
+comment4.target=java.lang.String\ budgetSummary()
+comment4.text=\n\ budgetSummary\ is\ evalevent\ to\ the\ toString\ method,\ whereby\ the\ information\ contain\ within\ the\ budget\ object\ is\ converted\ as\ string\ and\ displayed\ to\ the\ user\n
+comment5.params=expense
+comment5.target=void\ addExpenditure(Expenditure)
+comment5.text=\n\ Add\ expenditure\ to\ the\ budget\n\ @param\ expense\ -\ adds\ a\ expenditure\ object\ to\ the\ budget\ that\ will\ be\ used\ to\ calculate\ th\ current\ budget\ balance\n
+comment6.params=funder
+comment6.target=void\ addFunds(gojpcms.fiscal.FundingSource)
+comment6.text=\n\ Add\ funds\ to\ the\ budget\n\ @param\ the\ funds\ object\ contains\ a\ funding\ source\ and\ the\ amount\ being\ funded\ which\ is\ used\ to\ calculate\ the\ current\ budget\n
+numComments=7
