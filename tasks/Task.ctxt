@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=projectId\ description\ assigneeId
+comment0.target=Task(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ tasks\n
+comment1.params=projectId\ description\ assigneeId
+comment1.target=java.lang.String\ addTask(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ generateTaskId()
+comment2.text=\n\ generateProjectId\ -\ generates\ an\ unique\ id\ using\ java\ UUID\n\ @return\ the\ budget_id\n
+numComments=3
