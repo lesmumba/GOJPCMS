@@ -1,4 +1,4 @@
-package fiscal;
+package gojpcms.fiscal;
 
 
 /**

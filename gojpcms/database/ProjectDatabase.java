@@ -1,4 +1,4 @@
-package database;
+package gojpcms.database;
 
 import java.sql.SQLException;
 

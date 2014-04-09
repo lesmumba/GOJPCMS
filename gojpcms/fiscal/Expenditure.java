@@ -1,4 +1,4 @@
-package fiscal;
+package gojpcms.fiscal;
 import java.util.UUID;
 
 

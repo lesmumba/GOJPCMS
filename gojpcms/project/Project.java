@@ -1,4 +1,4 @@
-package project;
+package gojpcms.project;
 import java.util.*;
 
 /**
@@ -32,7 +32,7 @@ public class Project
 		}    
     };
     
-    public static enum ATTRIBUTES{PROJECT_LOCATION, PROJECT_NAME, PROJECT_ID, PROJECT_DESCRIPTION, PARENT_PROJECT};
+    public static enum ATTRIBUTES{PROJECT_LOCATION, PROJECT_NAME, PROJECT_OWNER, PROJECT_ID, PROJECT_DESCRIPTION, PARENT_PROJECT};
     
     TYPE type;
     LIFECYCLE stage;

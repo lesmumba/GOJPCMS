@@ -1,5 +1,5 @@
-package database;
-import acl.UserPermission;
+package gojpcms.user;
+import gojpcms.acl.ACLUser;
 
 
 /**
@@ -11,7 +11,7 @@ import acl.UserPermission;
 public abstract class User{
     // instance variables - replace the example below with your own
     String user_id, first_name, last_name, user_type;
-    UserPermission user_permission;
+    ACLUser user_permission;
 
     /**
      * Constructor for objects of class UserAccess
