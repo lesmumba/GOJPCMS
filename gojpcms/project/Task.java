@@ -1,5 +1,4 @@
-package tasks;
-import project.*;
+package gojpcms.project;
 import java.util.*;
 
 
