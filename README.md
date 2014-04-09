@@ -10,8 +10,8 @@ VERSION or DATE: Apr 08, 2014
 
 AUTHORS:
 
-@carylF
+[@carylF](https://github.com/carylF/ "Caryl Ford")
 
-@oshanyb4
+[@lesmumba](https://github.com/lesmumba/ "Mumba Sambo")
 
-@lesmumba
+[@oshanyb4](https://github.com/lesmumba/ "Oshane Bailey")
