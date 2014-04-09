@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=user_id
+comment0.target=Consultant(java.lang.String)
+comment1.params=user_id\ first_name\ last_name
+comment1.target=Consultant(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ displayContract()
+comment3.params=
+comment3.target=void\ signContract()
+numComments=4

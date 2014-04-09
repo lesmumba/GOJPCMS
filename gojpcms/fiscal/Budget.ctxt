@@ -18,6 +18,6 @@ comment5.params=expense
 comment5.target=void\ addExpenditure(Expenditure)
 comment5.text=\n\ Add\ expenditure\ to\ the\ budget\n\ @param\ expense\ -\ adds\ a\ expenditure\ object\ to\ the\ budget\ that\ will\ be\ used\ to\ calculate\ th\ current\ budget\ balance\n
 comment6.params=funder
-comment6.target=void\ addFunds(gojpcms.fiscal.FundingSource)
+comment6.target=void\ addFunds(FundingSource)
 comment6.text=\n\ Add\ funds\ to\ the\ budget\n\ @param\ the\ funds\ object\ contains\ a\ funding\ source\ and\ the\ amount\ being\ funded\ which\ is\ used\ to\ calculate\ the\ current\ budget\n
 numComments=7

@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Contract()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Contract\n
+comment1.params=type
+comment1.target=void\ setContractType(Contract.TYPE)
+comment2.params=contractId
+comment2.target=Contract(java.lang.String)
+comment3.params=
+comment3.target=void\ generateContractId()
+comment4.params=
+comment4.target=void\ terminateContract()
+comment5.params=
+comment5.target=void\ initiateContract()
+comment6.params=
+comment6.target=java.lang.String\ summaryDescrepancy()
+numComments=7

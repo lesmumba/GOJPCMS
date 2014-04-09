@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=user
+comment0.target=ACLUser(gojpcms.user.User)
+comment1.params=
+comment1.target=void\ setUserRole()
+comment2.params=
+comment2.target=void\ checkUserType()
+numComments=3

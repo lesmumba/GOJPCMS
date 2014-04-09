@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.params=user_id
+comment0.target=User(java.lang.String)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ UserAccess\n
+comment1.params=user_id\ first_name\ last_name
+comment1.target=User(java.lang.String,\ java.lang.String,\ java.lang.String)
+comment2.params=user_id
+comment2.target=void\ setUserId(java.lang.String)
+comment3.params=first_name
+comment3.target=void\ setFirstName(java.lang.String)
+comment4.params=last_name
+comment4.target=void\ setLastName(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getName()
+comment5.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment6.params=
+comment6.target=java.lang.String\ getUserId()
+comment6.text=\n\ \n\ @return\n
+numComments=7
