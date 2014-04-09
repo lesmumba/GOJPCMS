@@ -6,12 +6,12 @@ import java.util.*;
 /**
  * Write a description of class tasks here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Mumba Sambo
+ * @version Apr 08,2014
  */
 public class Task
 {
-    // instance variables - replace the example below with your own
+    // instance variables
     Boolean idTaken;
     String projectId;
     String description;
@@ -38,7 +38,7 @@ public class Task
         return taskId;
     }
     
-    public getTask(String taskId)
+    public Task getTask(String taskId)
     {
         /*
          * Get the task from the database.
@@ -57,9 +57,9 @@ public class Task
         do{
             taskId = UUID.randomUUID().toString();
             /* 
-             * Check if project with ID exists
-             * Project check_project = getProject(random_int);
-             * if (check_project = None) {
+             * Check if task with ID exists
+             * Project check_task = gettask(taskId);
+             * if (check_ = None) {
              *     id_taken = False;
              *  } */
             return taskId;
