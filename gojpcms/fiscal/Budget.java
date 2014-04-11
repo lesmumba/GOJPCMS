@@ -17,6 +17,7 @@ public class Budget
     String budget_id;
     ArrayList<String> expenditure_history = new ArrayList<String>();
     ArrayList<String> funding_history = new ArrayList<String>();
+    FundingSource funder;
     
 
     /**
@@ -94,6 +95,7 @@ public class Budget
          * Extract the funding amount and calculate the current budget balance
          * Extract other funding information such as funding source and source it in the funding history variable;
          */
+        this.funder = funder;
         
     }
     

@@ -1,16 +1,20 @@
 #BlueJ class context
 comment0.params=location\ x_cord\ y_cord
-comment0.target=Map(java.lang.String,\ float,\ float)
+comment0.target=Map(java.lang.String,\ double,\ double)
 comment1.params=location
 comment1.target=void\ setLocation(java.lang.String)
 comment2.params=title\ description
 comment2.target=void\ setTooltip(java.lang.String,\ java.lang.String)
 comment3.params=cords
-comment3.target=void\ setCords(float[])
-comment4.params=cordinate
-comment4.target=float\ getCord(Map.CORDS)
+comment3.target=void\ setCords(double[])
+comment4.params=
+comment4.target=double[]\ getCord()
 comment5.params=cordinate\ value
-comment5.target=void\ setCord(Map.CORDS,\ float)
+comment5.target=void\ setCord(int,\ float)
 comment6.params=
-comment6.target=void\ render_map()
-numComments=7
+comment6.target=javax.swing.ImageIcon\ getMap()
+comment7.params=d
+comment7.target=double\ getDouble(double)
+comment8.params=mapurl
+comment8.target=javax.swing.ImageIcon\ getGoogleMap(java.lang.String)
+numComments=9

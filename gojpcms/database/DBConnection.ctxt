@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.params=
+comment0.target=DBConnection()
+comment0.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment1.params=
+comment1.target=void\ openConnect()
+comment2.params=
+comment2.target=void\ closeConnection()
+comment3.params=
+comment3.target=void\ closeStatement()
+comment4.params=sql
+comment4.target=java.sql.ResultSet\ query(java.lang.String)
+numComments=5
