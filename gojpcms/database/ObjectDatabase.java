@@ -1,11 +1,14 @@
 package gojpcms.database;
 
+import gojpcms.util.Encryption;
+import gojpcms.util.Encryption.TYPE;
+
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.FileOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
+import java.util.HashMap;
 /**
  * @author Oshane Bailey
  * @category  Database Management
@@ -15,9 +18,10 @@ public class ObjectDatabase implements Serializable{
 	/**
 	 * @serial generated serialized number to aid in the encryption of the object
 	 */
-	private static final long serialVersionUID = -2145525264607194302L;
-	ArrayList<Object> objects; //the set of objects to be stored
+	static final long serialVersionUID = -2145525264607194302L;
+	HashMap<String, Object> objects; //the set of objects to be stored
 	Class<?> classname; //the class name of the objects to be stored
+	
 	/**
 	 * ObjectDatabase is used to store a bundle of object of the same type in a serialize file based on the class name of that object
 	 * This file is located in the assets/data folder under the object class.	
@@ -25,16 +29,16 @@ public class ObjectDatabase implements Serializable{
 	 */
 	public ObjectDatabase(Class<?> classname){
 		this.classname = classname;
-		this.objects = new ArrayList<Object>(); //initiate the ArrayList for the objects to be stored
+		this.objects = new HashMap<String, Object>(); //initiate the ArrayList for the objects to be stored
  	}
 	
 	/**
 	 * add method is used to added an object to be stored in the serialized object class file.
 	 * @param object - takes a child object of the object class to be appended to the object ArrayList
 	 */
-	public void add(Object object){
+	public void add(String id, Object object){
 		if(classname == object.getClass()){
-			this.objects.add(object);
+			this.objects.put(id, object);
 		}
 	}
 	
@@ -44,10 +48,9 @@ public class ObjectDatabase implements Serializable{
 	 */
 	public void saveObject(){
 		try{
-			System.out.println("Writing object to file "+this.classname.getClass().getSimpleName());
-			FileOutputStream fout = new FileOutputStream("assets/data/"+this.classname.getSimpleName()+".ser");
+			System.out.println("Writing object to file "+this.classname.getSimpleName());
+			FileOutputStream fout = new FileOutputStream("assets/data/"+Encryption.encrypt(TYPE.MD5, this.classname.getSimpleName())+".ser");
 			ObjectOutputStream obout = new ObjectOutputStream(fout);
-			System.out.println(this.objects.get(0).toString());
 			obout.writeObject(this);
 			obout.close();
 			System.out.println("Done!");
@@ -63,7 +66,7 @@ public class ObjectDatabase implements Serializable{
 	 * User user = (User) object.get(1);
 	 * @return ArrayList of objects the current ObjectDatabase object, which was stored or is to be stored.
 	 */
-	public ArrayList<Object> getObjects(){
+	public HashMap<String, Object> getObjects(){
 		return objects;
 	}
 	
@@ -71,8 +74,12 @@ public class ObjectDatabase implements Serializable{
 	 * getObject gets the object of based on the given input [not full implemented as yet]
 	 * @return object based on the given input
 	 */
-	public Object getObject(){
-		return null;
+	public Object getObject(String id){
+		return this.objects.get(id);
+	}
+	
+	public Class<?> getObjectClass(){
+		return this.classname;
 	}
 	
 	/**
@@ -82,18 +89,18 @@ public class ObjectDatabase implements Serializable{
 	 * This object contains the object ArrayList of the bundle of objects which based on the classname. 
 	 * {@link see getObject} 
 	 */
-	public ObjectDatabase readDatabase(Class<?> classname){
+	public void readDatabase(){
 		try{
-			FileInputStream fin = new FileInputStream("assets/data/"+this.classname.getSimpleName()+".ser");
+			System.out.println("Getting object from file "+this.classname.getSimpleName());
+			FileInputStream fin = new FileInputStream("assets/data/"+Encryption.encrypt(TYPE.MD5, this.classname.getSimpleName())+".ser");
 			ObjectInputStream oreader = new ObjectInputStream(fin);
 			ObjectDatabase obj = (ObjectDatabase) oreader.readObject();
-			//objects = obj.getObjects();
+			this.objects = obj.getObjects();
+			this.classname = obj.getObjectClass();
 			oreader.close();
-			return obj;
 		}catch(Exception e){
 			e.printStackTrace();
 		}
-		return null;
 	}
 
 }   

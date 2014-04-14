@@ -1,7 +1,7 @@
 package gojpcms.acl;
 
 import gojpcms.project.Project;
-import gojpcms.project.Project.ATTRIBUTES;
+import gojpcms.project.Project.INFO;
 import gojpcms.user.User;
 
 public class ACLProject {
@@ -21,19 +21,24 @@ public class ACLProject {
 		this.uperm = new ACLUser(user);
 	}
 	
+	public ACLProject(Project project){
+		this.project = project;
+		this.uperm = new ACLUser((User) User.getCurrentUser());
+	}
+	
 	public boolean hasPermission(PERMISSION permission){
 		return uperm.getPermission() == permission;
 	}
 	
 	public boolean hasFullPermission(){
-		if(project.get(ATTRIBUTES.PROJECT_OWNER).equals(user.getUserId())){
+		if(project.get(INFO.PROJECT_OWNER).equals(user.getUserId())){
 			return true;
 		}
 		return false;		
 	}
 	
 	public boolean hasFullPermission(User user){
-		if(project.get(ATTRIBUTES.PROJECT_OWNER).equals(user.getUserId())){
+		if(project.get(INFO.PROJECT_OWNER).equals(user.getUserId())){
 			return true;
 		}
 		return false;
