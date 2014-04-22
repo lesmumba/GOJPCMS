@@ -1,0 +1,6 @@
+#BlueJ class context
+comment0.params=layout
+comment0.target=CustomJPanel(java.awt.LayoutManager)
+comment1.params=
+comment1.target=void\ paint()
+numComments=2
