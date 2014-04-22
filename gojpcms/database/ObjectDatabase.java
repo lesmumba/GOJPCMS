@@ -67,7 +67,7 @@ public class ObjectDatabase implements Serializable{
 	 * @return ArrayList of objects the current ObjectDatabase object, which was stored or is to be stored.
 	 */
 	public HashMap<String, Object> getObjects(){
-		return objects;
+		return this.objects;
 	}
 	
 	/**

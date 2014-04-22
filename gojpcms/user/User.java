@@ -32,7 +32,7 @@ public abstract class User implements Serializable{
         // initialise instance variables
         this.user_id = user_id;
         user_type = this.getClass();
-        odb = new ObjectDatabase(ProjectOfficer.class);
+        odb = new ObjectDatabase(user_type);
     }
     
     public User(String user_id, String first_name, String last_name){
@@ -40,7 +40,7 @@ public abstract class User implements Serializable{
     	this.last_name = last_name;
     	this.user_id = user_id;
         user_type = this.getClass();
-        odb = new ObjectDatabase(ProjectOfficer.class);
+        odb = new ObjectDatabase(user_type);
     }
     
     public void setUserId(String user_id){
@@ -63,11 +63,13 @@ public abstract class User implements Serializable{
     	return false;
     }
     
-    public static void login(String user_id, String password){
+    public static boolean login(String user_id, String password){
     	User user = getUser(user_id);
     	if(user.isUser(user_id, password)){
     		CURRENT_USER = user;
+    		return true;
     	}
+    	return false;
     }
 
     /**
@@ -93,10 +95,11 @@ public abstract class User implements Serializable{
     	this.password = Encryption.encrypt(TYPE.MD5, password);
     }
     
-    public void registerUser(){
+    public boolean registerUser(){
     	if(this.password != null && this.user_id != null){
     		odb.add(this.user_id, this);
     		odb.saveObject();
+    		return true;
     	}else{
     		throw new NullPointerException("Basic user requirements has not met, (user_id, password)");
     	}

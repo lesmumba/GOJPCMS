@@ -6,6 +6,7 @@ import gojpcms.user.User;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.UUID;
 
 /**
@@ -32,7 +33,24 @@ public class Project implements Serializable {
 		private TYPE(String value) {
 			this.value = value;
 		}
-
+		
+		public static String[] toStringArray() {
+			int index = 0;
+			String[] attributes = new String[values().length];
+			for (TYPE attr : values()) {
+				attributes[index++] = attr.value;
+			}
+			return attributes;
+		}
+		
+		public static TYPE exists(String value){
+			for (TYPE attr : values()) {
+				if(attr.value.equals(value)){
+					return attr;
+				}
+			}
+			return null;
+		}
 	};
 
 	public static enum LIFECYCLE {
@@ -52,6 +70,25 @@ public class Project implements Serializable {
 
 		private ECONOMIC_SECTOR(String value) {
 			this.value = value;
+		}
+		
+
+		public static String[] toStringArray() {
+			int index = 0;
+			String[] attributes = new String[values().length];
+			for (ECONOMIC_SECTOR attr : values()) {
+				attributes[index++] = attr.value;
+			}
+			return attributes;
+		}
+		
+		public static ECONOMIC_SECTOR exists(String value){
+			for (ECONOMIC_SECTOR attr : values()) {
+				if(attr.value.equals(value)){
+					return attr;
+				}
+			}
+			return null;
 		}
 	};
 
@@ -85,8 +122,7 @@ public class Project implements Serializable {
 		if (User.getCurrentUser() != null) {
 			this.projectName = projectName;
 			this.description = description;
-			ProjectOfficer officer = (ProjectOfficer) User.getCurrentUser();
-			this.ownerId = officer.getUserId();
+			this.ownerId = User.getCurrentUser().getUserId();
 			this.type = projectType;
 			this.projectId = generateProjectId();
 		} else {
@@ -119,8 +155,7 @@ public class Project implements Serializable {
 		// initialise instance variables
 		this.projectName = projectName;
 		this.description = description;
-		ProjectOfficer officer = (ProjectOfficer) User.getCurrentUser();
-		this.ownerId = officer.getUserId();
+		this.ownerId = User.getCurrentUser().getUserId();
 		this.type = projectType;
 		this.projectId = generateProjectId();
 		this.parentProjectId = parentProjectId;
@@ -151,11 +186,12 @@ public class Project implements Serializable {
 		return this.economic_sector.value;
 	}
 
-	public void registerProject() {
+	public boolean registerProject() {
 		ObjectDatabase odb = new ObjectDatabase(Project.class);
 		if (projectId != null && projectName != null && ownerId != null) {
 			odb.add(projectId, this);
 			odb.saveObject();
+			return true;
 		} else {
 			throw new NullPointerException(
 					"Basic user requirements has not met, (user_id, password)");
@@ -170,6 +206,16 @@ public class Project implements Serializable {
 		ObjectDatabase odb = new ObjectDatabase(Project.class);
 		odb.readDatabase();
 		return (Project) odb.getObject(project_id);
+	}
+	
+	public static HashMap<String, Object> getProjects() {
+		/*
+		 * Get the project form the database. If found, return the Object. Else
+		 * return none... Or something.
+		 */
+		ObjectDatabase odb = new ObjectDatabase(Project.class);
+		odb.readDatabase();
+		return odb.getObjects();
 	}
 
 	public Project addSubProject(String subprojectName,
