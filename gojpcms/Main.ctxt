@@ -1,4 +1,8 @@
 #BlueJ class context
 comment0.params=args
 comment0.target=void\ main(java.lang.String[])
-numComments=1
+comment1.params=panel
+comment1.target=void\ repaintFrame(javax.swing.JPanel)
+comment2.params=panel
+comment2.target=void\ show(javax.swing.JPanel)
+numComments=3
