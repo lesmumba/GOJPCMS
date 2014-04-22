@@ -49,7 +49,10 @@ public class ObjectDatabase implements Serializable{
 	public void saveObject(){
 		try{
 			System.out.println("Writing object to file "+this.classname.getSimpleName());
-			FileOutputStream fout = new FileOutputStream("assets/data/"+Encryption.encrypt(TYPE.MD5, this.classname.getSimpleName())+".ser");
+			if(!(new File("assets/data/")).exists())
+					new File("assets/data/").mkdirs();
+			File file = new File("assets/data/"+Encryption.encrypt(TYPE.MD5, this.classname.getSimpleName())+".ser");
+			FileOutputStream fout = new FileOutputStream(file);
 			ObjectOutputStream obout = new ObjectOutputStream(fout);
 			obout.writeObject(this);
 			obout.close();
@@ -92,7 +95,8 @@ public class ObjectDatabase implements Serializable{
 	public void readDatabase(){
 		try{
 			System.out.println("Getting object from file "+this.classname.getSimpleName());
-			FileInputStream fin = new FileInputStream("assets/data/"+Encryption.encrypt(TYPE.MD5, this.classname.getSimpleName())+".ser");
+			File file = new File("assets/data/"+Encryption.encrypt(TYPE.MD5, this.classname.getSimpleName())+".ser");
+			FileOutputStream fout = new FileOutputStream(file);
 			ObjectInputStream oreader = new ObjectInputStream(fin);
 			ObjectDatabase obj = (ObjectDatabase) oreader.readObject();
 			this.objects = obj.getObjects();
